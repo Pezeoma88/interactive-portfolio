@@ -170,4 +170,88 @@ a:hover {
     }
 }
 
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #334155;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #1e293b;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #334155;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1); /* Makes dark icons white */
+    transition: filter 0.3s ease;
+}
+
+.social-links a:hover img {
+    filter: brightness(0) invert(0.8) sepia(1) saturate(5) hue-rotate(190deg); /* Blue tint on hover */
+}
+
+.email-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 1.5rem;
+    }
+    
+    .social-links a {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .social-links img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+}
+
 
