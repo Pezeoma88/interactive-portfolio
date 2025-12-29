@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll("a button");
+const buttons = document.querySelectorAll("nav button");
 const sections = document.querySelectorAll(".content-section");
 
 buttons.forEach(button => {
