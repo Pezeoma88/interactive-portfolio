@@ -1,14 +1,12 @@
-const buttons = document.querySelectorAll("nav button");
-const sections = document.querySelectorAll(".content-section");
+const links = document.querySelectorAll('.nav a');
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const target = button.getAttribute("data-section");
+links.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    link.style.transform = 'scale(1.1)';
+  });
 
-        sections.forEach(section => {
-            section.classList.add("hidden");
-        });
-
-        document.getElementById(target).classList.remove("hidden");
-    });
+  link.addEventListener('mouseleave', () => {
+    link.style.transform = 'scale(1)';
+  });
 });
+
